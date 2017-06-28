@@ -1,8 +1,20 @@
-var ExampleModule = require('./../js/scripts.js').exampleModule;
+//var What = require('./../js/scripts.js').whatModule;
 
 
 $(document).ready(function() {
-  var exampleInstance = new ExampleModule('args');
+  $("#form").submit(function(event){
+    event.preventDefault();
+    var input = $("#userInput").val();
 
-  console.log(exampleInstance.examplePrototype());
+    // $.get("http://api.wolframalpha.com/v1/simple?appid=EERKW7-GV9G767XUJ&i=what+is+the+capital+of+oregon%3F")
+    //   .then(function(){
+        $(".output").html("<img src='" + "http://api.wolframalpha.com/v1/simple?appid=EERKW7-GV9G767XUJ&i=what+is+the+capital+of+oregon%3F" + "'/>");
+      // });
+
+  });
+
+
 });
+
+
+// '<img src=' + html + '/>'

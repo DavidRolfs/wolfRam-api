@@ -1,10 +1,14 @@
 //business logic stuff for a particular module
-var ExampleModule = function(args) {
-  this.args = args; //to be replaced with constructor arguments
-};
+// var What = function() {
+// };
+//
+// What.prototype.search = function() {
+//   $.get(http://api.wolframalpha.com/v1/simple?appid=EERKW7-GV9G767XUJ&i=What+airplanes+are+flying+overhead%3F)
+// };
+//
+// exports.whatModule = What;
 
-ExampleModule.prototype.examplePrototype = function() {
-  return 'this is an example prototype method';
-};
 
-exports.exampleModule = ExampleModule;
+//EERKW7-GV9G767XUJ
+
+//http://api.wolframalpha.com/v1/simple?appid=EERKW7-GV9G767XUJ&i=What+airplanes+are+flying+overhead%3F

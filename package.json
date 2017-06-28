@@ -1,12 +1,12 @@
 {
-  "name": "Sample Project",
+  "name": "WHAT",
   "version": "1.0.0",
-  "description": "This is a scaffold for a sample project",
+  "description": "A simple app to practice using APIs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Joe Parsley",
+  "author": "Joe Parsley & David Rolfs",
   "license": "ISC",
   "devDependencies": {
     "bower-files": "^4.0.0",
