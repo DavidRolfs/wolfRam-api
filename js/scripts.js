@@ -1,14 +1,20 @@
-//business logic stuff for a particular module
-// var What = function() {
-// };
-//
-// What.prototype.search = function() {
-//   $.get(http://api.wolframalpha.com/v1/simple?appid=EERKW7-GV9G767XUJ&i=What+airplanes+are+flying+overhead%3F)
-// };
-//
-// exports.whatModule = What;
 
 
-//EERKW7-GV9G767XUJ
+What = function(){
+};
 
-//http://api.wolframalpha.com/v1/simple?appid=EERKW7-GV9G767XUJ&i=What+airplanes+are+flying+overhead%3F
+var what;
+
+What.prototype.GetWhat = function(displayResult){
+  $.get("https://api.wolframalpha.com/v2/query?input=who+lives+in+a+pineapple+under+the+sea%3F&format=plaintext&output=JSON&appid=EERKW7-GV9G767XUJ").then(function(response){
+    what = JSON.parse(response);
+    displayResult(what.queryresult.pods[1].subpods[0].plaintext);
+    console.log(what.queryresult.pods[1].subpods[0].plaintext);
+
+  })
+  .fail(function(error) {
+    $('#output').text("try again");
+  });
+};
+
+exports.whatModule = What;
