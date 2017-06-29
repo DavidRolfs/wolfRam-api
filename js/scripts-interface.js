@@ -11,9 +11,11 @@ $(document).ready(function(){
   $("#form").submit(function(event){
     event.preventDefault();
     newWhat = new What();
-    // var cityInput = $("#userInput").val();
+    var userInput = $("#userInput").val();
+    var input = userInput.replace(/\s/g, '+')
+    console.log(input)
 
-    newWhat.GetWhat(displayResult);
+    newWhat.GetWhat(displayResult, input);
 
   });
 });
